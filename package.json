@@ -1,0 +1,11 @@
+{
+  "name": "bootstrap-nice-select-examples",
+  "version": "0.1.0",
+  "description": "Project for testing bootstrap-nice-select with npm link",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Gostomski",
+  "license": "MIT",
+  "private": true
+}
