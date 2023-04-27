@@ -94,13 +94,18 @@
       return toRet;
     }
 
-    function afterAdd(key, text) {
-      alert(`ADDED = Key: '${key}' | Text: '${text}'`);
-    }
+    bootstrapNiceSelect.BootstrapNiceSelect("#exampleSelect2", {
+      searchData: 'callRemoteData'
+    });
 
-    function afterDelete(key, text) {
-      alert(`DELETED = Key: '${key}' | Text: '${text}'`);
-    }
+    document.querySelector("#exampleSelect2").addEventListener("inserted.bs.bootstrap-nice-select", function (e) {
+      alert(`ADDED = Key: '${e.detail.key}' | Text: '${e.detail.value}'`);
+    });
+
+    document.querySelector("#exampleSelect2").addEventListener("removed.bs.bootstrap-nice-select", function (e) {
+      alert(`REMOVED = Key: '${e.detail.key}' | Text: '${e.detail.value}'`);
+    });
+
   </script>
 </body>
 
