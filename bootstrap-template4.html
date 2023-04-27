@@ -25,7 +25,7 @@
       <option value="Banana">Banana</option>
       <option value="Apple">Apple</option>
       <option value="Orange">Orange</option>
-      <option value="Lemon">Lemon</option>
+      <option value="Lemon" selected="selected">Lemon</option>
       <option value="Pepper">Pepper</option>
       <option value="Mushrooms">Mushrooms</option>
       <option value="Cabbages">Cabbages</option>
@@ -37,10 +37,9 @@
   <div class="d-flex flex-row justify-content-around my-5">
     <label class="text-center">Test with OptGroup:</label>
     <div class="col-3">
-      <select id="exampleSelect2" multiple="multiple">
+      <select id="exampleSelect2" multiple="multiple" disabled="disabled">
         <optgroup label="Fruit">
-          <option value="Banana" selected="selected">Banana</option>
-          <option value="Apple">Apple</option>
+          <option value="Banana" selected="selected" disabled="disabled">Banana</option>
         </optgroup>
       </select>
     </div>
@@ -61,17 +60,20 @@
         {
           id: "Banana",
           text: "Banana",
-          optGroup: "Fruit"
+          optGroup: "Fruit",
+          disabled: false
         },
         {
           id: "Apple",
           text: "Apple",
-          optGroup: "Fruit"
+          optGroup: "Fruit",
+          disabled: false
         },
         {
           id: "Orange",
           text: "Orange",
-          optGroup: "Fruit"
+          optGroup: "Fruit",
+          disabled: false
         },
         {
           id: "Pepper",
