@@ -37,7 +37,7 @@
   <div class="d-flex flex-row justify-content-around my-5">
     <label class="text-center">Test with OptGroup:</label>
     <div class="col-3">
-      <select id="exampleSelect2" multiple="multiple" disabled="disabled">
+      <select id="exampleSelect2" multiple="multiple">
         <optgroup label="Fruit">
           <option value="Banana" selected="selected" disabled="disabled">Banana</option>
         </optgroup>
@@ -78,7 +78,8 @@
         {
           id: "Pepper",
           text: "Pepper",
-          optGroup: "Vegetable"
+          optGroup: "Vegetable",
+          disabled: true
         },
         {
           id: "Garlic",
@@ -96,7 +97,7 @@
       return toRet;
     }
 
-    bootstrapNiceSelect.BootstrapNiceSelect("#exampleSelect2", {
+    let select = bootstrapNiceSelect.BootstrapNiceSelect("#exampleSelect2", {
       searchData: 'callRemoteData'
     });
 
