@@ -21,7 +21,7 @@
   <h1 class="text-center my-4">Examples - Bootstrap Nice Select</h1>
   <div class="d-flex flex-row justify-content-around my-5">
     <label class="text-center">Test with no OptGroup:</label>
-    <select id="exampleSelect1" data-bs-toggle="bootstrap-nice-select">
+    <select id="exampleSelect1" data-bs-toggle="bootstrap-nice-select" multiple="multiple">
       <option value="Banana">Banana</option>
       <option value="Apple">Apple</option>
       <option value="Orange">Orange</option>
@@ -37,7 +37,7 @@
   <div class="d-flex flex-row justify-content-around my-5">
     <label class="text-center">Test with OptGroup:</label>
     <div class="col-3">
-      <select id="exampleSelect2" multiple="multiple">
+      <select id="exampleSelect2" multiple="multiple" data-animation="false" data-tags="true">
         <optgroup label="Fruit">
           <option value="Banana" selected="selected" disabled="disabled">Banana</option>
         </optgroup>
