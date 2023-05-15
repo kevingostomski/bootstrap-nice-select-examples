@@ -97,8 +97,16 @@
       return toRet;
     }
 
+    function checkTag(key) {
+      if (key.toLowerCase().includes("ä") || key.toLowerCase().includes("ö") || key.toLowerCase().includes("ü")) {
+        return false;
+      }
+      return true;
+    }
+
     let select = bootstrapNiceSelect.BootstrapNiceSelect("#exampleSelect2", {
-      searchData: 'callRemoteData'
+      searchData: 'callRemoteData',
+      tagsCheck: 'checkTag'
     });
 
     document.querySelector("#exampleSelect2").addEventListener("inserted.bs.bootstrap-nice-select", function (e) {
