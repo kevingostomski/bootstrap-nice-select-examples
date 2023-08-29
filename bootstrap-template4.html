@@ -99,9 +99,9 @@
 
     async function checkTag(key) {
       if (key.toLowerCase().includes("ä") || key.toLowerCase().includes("ö") || key.toLowerCase().includes("ü")) {
-        return new Promise(function () { return false });
+        return false;
       }
-      return new Promise(function () { return true });
+      return true;
     }
 
     let select = bootstrapNiceSelect.BootstrapNiceSelect("#exampleSelect2", {
