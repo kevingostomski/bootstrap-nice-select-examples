@@ -37,7 +37,7 @@
   <div class="d-flex flex-row justify-content-around my-5">
     <label class="text-center">Test with OptGroup:</label>
     <div class="col-3">
-      <select id="exampleSelect2" multiple data-animation data-tags="true" data-token-separators='[",","Enter"]'>
+      <select id="exampleSelect2" multiple data-token-separators='[",","Enter"]'>
         <optgroup label="Fruit">
           <option value="Banana" selected disabled>Banana</option>
         </optgroup>
@@ -97,24 +97,17 @@
       return toRet;
     }
 
-    function checkTag(key) {
+    async function checkTag(key) {
       if (key.toLowerCase().includes("ä") || key.toLowerCase().includes("ö") || key.toLowerCase().includes("ü")) {
-        return false;
+        return new Promise(function () { return false });
       }
-      return true;
+      return new Promise(function () { return true });
     }
 
     let select = bootstrapNiceSelect.BootstrapNiceSelect("#exampleSelect2", {
       searchData: 'callRemoteData',
-      tagsCheck: 'checkTag'
-    });
-
-    document.querySelector("#exampleSelect2").addEventListener("inserted.bs.bootstrap-nice-select", function (e) {
-      alert(`ADDED = Key: '${e.detail.key}' | Text: '${e.detail.value}'`);
-    });
-
-    document.querySelector("#exampleSelect2").addEventListener("removed.bs.bootstrap-nice-select", function (e) {
-      alert(`REMOVED = Key: '${e.detail.key}' | Text: '${e.detail.value}'`);
+      tagsCheck: 'checkTag',
+      tags: true
     });
 
   </script>
